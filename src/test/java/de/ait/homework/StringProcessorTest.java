@@ -32,7 +32,7 @@ public class StringProcessorTest {
     }
     @Test
     public void testIsPalindromeTrue(){
-        assertTrue(stringProcessor.isPalindrome("racecar"));
+        assertEquals(true,stringProcessor.isPalindrome("racecar"));
     }
     @Test
     public void testIsPalindromeFalse(){
