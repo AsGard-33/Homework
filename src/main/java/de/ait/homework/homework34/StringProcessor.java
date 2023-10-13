@@ -1,4 +1,4 @@
-package de.ait.homework;
+package de.ait.homework.homework34;
 
 public class StringProcessor {
         public String concatenate(String str1, String str2) {
