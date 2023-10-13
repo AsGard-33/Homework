@@ -38,5 +38,12 @@ public class StringProcessorTest {
     public void testIsPalindromeFalse(){
         assertFalse(stringProcessor.isPalindrome("privet"));
     }
+    @Test
+    public void testConcatenate() {
+        String str1="Hi";
+        String str2=" Nata";
+        String result="Hi Nata";
+        assertEquals("Hi Nata",result);
+    }
 }
 
