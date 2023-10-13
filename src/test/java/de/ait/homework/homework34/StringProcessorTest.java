@@ -1,5 +1,6 @@
-package de.ait.homework;
+package de.ait.homework.homework34;
 
+import de.ait.homework.homework34.StringProcessor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
