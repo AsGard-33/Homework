@@ -1,9 +1,9 @@
 package de.ait.homework.homework36;
 
 public class Superhero {
-    public String name;
-    public int power;
-    public int age;
+    private String name;
+    private int power;
+    private int age;
 
     public Superhero(String name, int power, int age) {
         this.name = name;
