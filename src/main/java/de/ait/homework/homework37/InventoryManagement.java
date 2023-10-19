@@ -1,49 +1,48 @@
 package de.ait.homework.homework37;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class InventoryManagement {
-   private List<MobilePhone> mobilePhoneList;
+    private List<MobilePhone> mobilePhoneList;
 
     public InventoryManagement() {
-        this.mobilePhoneList = mobilePhoneList;
+        this.mobilePhoneList = new ArrayList<>();
     }
-     void addMobilePhone(MobilePhone phone){
-        mobilePhoneList.add(phone);
 
-     }
-    public MobilePhone mobilePhoneListList(int id){
+    public boolean addMobilePhone(MobilePhone phone) {
+        return mobilePhoneList.add(phone);
+    }
+
+    public MobilePhone getMobilePhone(UUID id) {
         for (MobilePhone phone : mobilePhoneList) {
-            if (phone.getId() == id) {
+            if (phone.getId().equals(id)) {
                 return phone;
             }
         }
         return null;
     }
-    void updateMobilePhone(MobilePhone phone){
+
+    public void updateMobilePhone(UUID id, MobilePhone phone) {
         for (int i = 0; i < mobilePhoneList.size(); i++) {
-            if (mobilePhoneList.get(i).getId() == phone.getId()) {
+            if (mobilePhoneList.get(i).getId().equals(id)) {
                 mobilePhoneList.set(i, phone);
                 break;
             }
         }
-
     }
-    void deleteMobilePhone(int id){
-        MobilePhone toRemove = null;
+
+    public boolean deleteMobilePhone(UUID id) {
         for (MobilePhone phone : mobilePhoneList) {
-            if (phone.getId() == id) {
-                toRemove = phone;
-                break;
+            if (phone.getId().equals(id)) {
+                return mobilePhoneList.remove(phone);
             }
         }
-        if (toRemove != null) {
-            mobilePhoneList.remove(toRemove);
-        }
-
+        return false;
     }
-    public List<MobilePhone> mobilePhoneList1(){
-        return mobilePhoneList;
 
+    public List<MobilePhone> listMobilePhones() {
+        return mobilePhoneList;
     }
 }

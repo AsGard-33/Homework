@@ -1,27 +1,23 @@
 package de.ait.homework.homework37;
 
+import java.util.UUID;
 public class MobilePhone {
-    private int id;
+    private UUID id;
     private String brand;
     private String model;
     private String operatingSystem;
     private double price;
 
-    public MobilePhone(int id, String brand, String model, String operatingSystem, double price) {
-        this.id = id;
+    public MobilePhone(String brand, String model, String operatingSystem, double price) {
+        this.id = UUID.randomUUID();
         this.brand = brand;
         this.model = model;
         this.operatingSystem = operatingSystem;
         this.price = price;
-
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getBrand() {
