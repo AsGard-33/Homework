@@ -30,7 +30,7 @@ class BankAccountTest {
     public void testWithdrawalWithException() {
         account.deposit(200.0);
         assertThrows(BankAccount.InsufficientFundsException.class, () -> {
-            account.withdraw(300.0); // Это должно вызвать исключение
+            account.withdraw(300.0);  // Это должно вызвать исключение
         });
     }
 }

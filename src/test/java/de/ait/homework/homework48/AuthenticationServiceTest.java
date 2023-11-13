@@ -14,7 +14,7 @@ class AuthenticationServiceTest {
 
     @BeforeEach
     public void setUp() {
-        // Создаем карту пользователей для тестирования
+        //  Создаем карту пользователей для тестирования
         Map<String, User> testUsers = new HashMap<>();
         testUsers.put("user1", new User("user1", "password1", new BankAccount("acc123", "user1")));
         testUsers.put("user2", new User("user2", "password2", new BankAccount("acc456", "user2")));

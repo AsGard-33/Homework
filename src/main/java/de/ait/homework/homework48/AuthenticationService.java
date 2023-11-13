@@ -33,6 +33,7 @@ public class AuthenticationService {
         if (userAccount != null) {
             // Здесь можно взаимодействовать с банковским счетом
             logger.info("Банковский счет для пользователя {}: {}", username, userAccount.getAccountNumber());
+            logger.info("Текущий баланс: {}", userAccount.getBalance());
         }
     }
 
